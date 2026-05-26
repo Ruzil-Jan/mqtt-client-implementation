@@ -197,7 +197,7 @@ connected_clients = set()
 @socketio.on('connect')
 def handle_connect():
     connected_clients.add(request.sid)
-    print("[WebSocket] ✓ Клиент подключился")
+    print("[WebSocket] Клиент подключился")
     # Сообщить браузеру текущий статус MQTT-соединения
     emit('connection_response', {
         'status':         'connected',
